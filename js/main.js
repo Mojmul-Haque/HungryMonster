@@ -90,3 +90,16 @@ fetch(completedURl)
 document.getElementById('search_meal').addEventListener('click', function() {
     console.log('got')
 })
+
+
+
+// const ingredientsAll = [element.strIngredient1, element.strIngredient2, element.strIngredient3, element.strIngredient4, element.strIngredient5, element.strIngredient6]
+// const ing = ingredientsAll.map(element => {
+//     // var show_list = document.getElementById('show_list')
+//     // console.log(element)
+//     // const ul = document.createElement('ul')
+//     // const li = document.createElement('li')
+//     // li.innerHTML = element;
+//     // ul.appendChild(li)
+//     // show_list.appendChild(ul)
+// })

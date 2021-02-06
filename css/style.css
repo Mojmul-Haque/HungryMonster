@@ -1,4 +1,40 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    overflow-x: hidden;
+}
+
 #show_meals img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+}
+
+#show_meals li {
+    list-style: none;
+}
+
+#show_meals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px
+}
+
+#container {
+    width: 1170px;
+    margin: 0 auto
+}
+
+#container #show_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#show_details img {
+    width: 320px;
+    height: 320px;
+    border-radius: 10px;
+    margin: 0 auto
 }

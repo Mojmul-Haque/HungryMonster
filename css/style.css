@@ -7,23 +7,24 @@ body {
     overflow-x: hidden;
 }
 
-#show_meals img {
-    width: 100%;
-}
-
-#show_meals li {
-    list-style: none;
-}
-
-#show_meals {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px
-}
-
 #container {
     width: 1170px;
     margin: 0 auto
+}
+
+#show_recipe img {
+    width: 100%;
+}
+
+#show_recipe {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+.main_recipe h4 {
+    text-align: center;
 }
 
 #container #show_details {

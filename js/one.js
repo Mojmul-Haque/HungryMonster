@@ -13,47 +13,60 @@ document.getElementById('search_meal').addEventListener('click', () => {
 //display recipe by search name
 const displayMeals = data => {
     console.log(data)
-        // const catchMeal = data.meals.map(element => {
-        //     const mealName = element.strMeal;
-        //     const mealPic = element.strMealThumb
-        //     console.log(mealName, mealPic)
 
-    //     // now show me the item in display
-    //     const ul = document.getElementById('show_recipe');
-    //     const recipeInfo = ` <li>${mealName}</li>
-    //     `
-    //     ul.innerHTML = recipeInfo
-
-
-    // })
-    const allmealsList = data.meals
     const recipeContainer = document.getElementById('show_recipe');
-    for (let i = 0; i < allmealsList.length; i++) {
-        const mealName = allmealsList[i].strMeal
-        const mealPic = allmealsList[i].strMealThumb
-        console.log(mealName)
+    const allmealsList = data.meals
+    allmealsList.forEach(element => {
+        const mealName = element.strMeal
+        const mealPic = element.strMealThumb
 
         const recipeInnerDIv = document.createElement('div')
         recipeInnerDIv.className = 'main_recipe'
-        const recipeInfo = `  <img src ="${mealPic}">
-        <h4>${mealName}</h4>
-       
-        `
+        const recipeInfo = `     <img src ="${mealPic}">
+        <h4>${mealName}</h4>     `
         recipeInnerDIv.innerHTML = recipeInfo
 
         recipeContainer.appendChild(recipeInnerDIv)
 
 
-        // recipe details 
+
+
+        // recipe details event handelar
 
         recipeInnerDIv.addEventListener('click', () => {
-            console.log('click')
+
+            const recipeDetails = document.getElementById('meals_details')
+
+            var recipeDetailsContainer = document.createElement('div');
+
+            const recipeDetailsInfo = `<img src = "${mealPic}">
+                <h3>${mealName}</h3> 
+                <h4>Ingredients</h4>
+                <p> <i class="fas fa-check-square"></i> Mojmul</p>
+                `
+            recipeDetailsContainer.innerHTML = recipeDetailsInfo;
+            recipeDetails.appendChild(recipeDetailsContainer)
+
+            // ingridents element;
+            const ingredients = [element.strIngredient1, element.strIngredient2, element.strIngredient3, element.strIngredient4, element.strIngredient5, element.strIngredient6, element.strIngredient7, element.strIngredient8, element.strIngredient9, element.strIngredient10, element.strIngredient11, element.strIngredient12, element.strIngredient13]
+            ingredients.map(item => {
+                const li = document.createElement('p')
+                li.innerText = item
+                recipeDetailsContainer.appendChild(li)
+            })
+
+
+
+
+
+
+
+
         })
-    }
 
 
 
-
+    })
 
 
 

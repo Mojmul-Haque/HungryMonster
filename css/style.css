@@ -1,6 +1,11 @@
 * {
     margin: 0;
-    padding: 0
+    padding: 0,
+}
+
+ul,
+ol {
+    list-style: none;
 }
 
 body {
@@ -27,15 +32,6 @@ body {
     text-align: center;
 }
 
-#container #show_details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#show_details img {
-    width: 320px;
-    height: 320px;
-    border-radius: 10px;
-    margin: 0 auto
+#meals_details img {
+    width: 150px;
 }

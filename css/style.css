@@ -9,7 +9,7 @@ ol {
 }
 
 body {
-    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -37,19 +37,46 @@ body {
 }
 
 #meals_details img {
-    width: 400px;
-    height: 400px;
+    width: 100%;
     border-radius: 10px;
     margin: 50px 0 10px;
 }
 
 #meals_details h3 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0
+}
+
+#meals_details h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 
 #show_recipe .recipie {
-    margin: 10px 0
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.recipie img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#show_recipe .recipie h4 {
+    padding: 15px 0;
+    background: #f1f1f1;
+    color: #222;
+}
+
+.ingredients_item p {
+    margin-bottom: 3px;
+}
+
+.ingredients_item p i {
+    color: tomato
 }
 
 

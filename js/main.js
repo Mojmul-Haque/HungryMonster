@@ -1,6 +1,6 @@
 document.getElementById('search_meal').addEventListener('click', () => {
 
-    let inputMeal = document.getElementById('input_meal').value;
+    const inputMeal = document.getElementById('input_meal').value;
     if (inputMeal !== '') {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputMeal}`)
             .then(response => response.json())
@@ -41,13 +41,14 @@ const displayMeals = data => {
                     var recipeDetailsContainer = document.createElement('div');
                     recipeDetailsContainer.className = 'col-lg-4'
 
-                    const recipeDetailsInfo = `<img src = "${mealPic}">
-                    <h3>${mealName}</h3> 
-                    <h4>Ingredients</h4>
+                    const recipeDetailsInfo = `
+                                                <img src = "${mealPic}">
+                                                <h3>${mealName}</h3> 
+                                                <h4>Ingredients</h4>
                     `
                     recipeDetailsContainer.innerHTML = recipeDetailsInfo;
                     recipeDetails.appendChild(recipeDetailsContainer)
-                        // ingridents element;
+                        // ingridents element ;
                     const ingredients = [element.strIngredient1, element.strIngredient2, element.strIngredient3, element.strIngredient4, element.strIngredient5, element.strIngredient6, element.strIngredient7, element.strIngredient8, element.strIngredient9, element.strIngredient10, element.strIngredient11, element.strIngredient12, element.strIngredient13, element.strIngredient14, element.strIngredient15, element.strIngredient16, element.strIngredient17, element.strIngredient18, element.strIngredient19, element.strIngredient20]
 
                     ingredients.map(item => {
@@ -78,7 +79,7 @@ const displayMeals = data => {
 }
 
 // eror condition
-conditionShow = (erorId, istrue, notErorId, isFalse) => {
+const conditionShow = (erorId, istrue, notErorId, isFalse) => {
     const eror = document.getElementById(erorId)
     eror.style.display = istrue
     const notEror = document.getElementById(notErorId)
